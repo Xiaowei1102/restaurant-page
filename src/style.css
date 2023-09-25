@@ -1,5 +1,5 @@
 body {
-    height: 100vh;
+
     width: 100vw;
     margin: 0;
 }
@@ -8,12 +8,10 @@ body {
     /* background: url('./sushi.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: auto;
 }
 .title {
     align-self: stretch;
@@ -46,20 +44,28 @@ body {
 }
 
 .homecontainer,
-.menucontainer {
+.menucontainer,
+.contactcontainer {
     background-color: gray;
     opacity: 0.9;
     min-height: 800px;
     min-width: 800px;
-    overflow-y: auto;
+    /* overflow: scroll; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    gap: 20px;
 }
 
-.homecontainer > div {
+.homecontainer > div,
+.menucontainer > div,
+.contactcontainer > div
+{
     height: 200px;
     width: 500px;
     border: 3px solid black;
@@ -67,6 +73,7 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     font-size: 25px;
+
 }
 
 .hours,
@@ -83,6 +90,24 @@ body {
     flex-direction: column;
 }
 
-.menucontainer {
+[class*='items'] > div{
+    display: flex;
+    gap: 50px;
 
+}
+
+.menucontainer > div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.menucontainer > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+[class^='name'] {
+    padding-bottom: 30px;
 }
